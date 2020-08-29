@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="/css/header.css" />
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar"
+    ><img src="/images/grass.svg" style="height: 32px; width: 40px"
+  /></a>
+  <a class="navbar-brand ml2" href="/">FARMSOCIAL</a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 mr-auto">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+      <% if(locals.user){ %>
+      <!--
+      <li class="nav-item">
+        <a class="nav-link" href=""><img class="profile-img" src="<%=user.avatar%>" alt="" style="height: 32px; width:40px;border-radius:50%;"><span class="sr-only">(current)</span></a>
+      </li>
+
+-->
+      <li class="nav-item-1 active mr-2">
+        <a class="nav-link" href="/"
+          >Home<span class="sr-only">(current)</span></a
+        >
+      </li>
+
+      <li class="nav-item-1 active mr-2">
+        <a class="nav-link" href="/users/profile"
+          ><span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=""
+          ><img
+            class="profile-img"
+            src="<%=user.avatar%>"
+            alt=""
+            style="height: 32px; width: 40px; border-radius: 50%"
+          /><span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link btn btn-danger text-white"
+          type="button"
+          id="sign-out"
+          href="/users/sign-out"
+          >Sign Out</a
+        >
+      </li>
+      <% } else { %>
+      <li class="nav-item">
+        <a
+          class="nav-link btn btn-success text-white mr-2 px-3"
+          href="/users/sign-in"
+          type="button"
+          >Sign In</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link btn btn-success text-white"
+          href="/users/sign-up"
+          type="button"
+          >Sign Up</a
+        >
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</nav>

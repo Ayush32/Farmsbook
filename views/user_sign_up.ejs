@@ -1,0 +1,81 @@
+<!-- <link rel="stylesheet" href="/css/user_sign_up.css"> -->
+<link rel="stylesheet" href="/css/sign_in.css" />
+<div class="container jello-horizontal">
+  <h2 class="form-heading">Sign Up</h2>
+  <div class="form-container">
+    <form action="/users/create" method="POST">
+      <div id="user-input">
+        <i class="fas fa-user-circle icon"></i
+        ><input
+          type="text"
+          size="30"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+      </div>
+      <div id="email-input">
+        <i class="fas fa-envelope-open-text icon"></i
+        ><input
+          type="email"
+          name="email"
+          size="30"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+
+      <div id="pass-input">
+        <i class="fas fa-unlock-alt icon"></i
+        ><input
+          type="password"
+          name="password"
+          size="30"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <div id="confirm-pass-input">
+        <i class="fas fa-user-lock icon"></i
+        ><input
+          type="password"
+          name="confirm_password"
+          size="30"
+          placeholder="Confirm Password"
+          required
+        />
+      </div>
+
+      <div class="submit-btn">
+        <button type="submit">Sign Up</button>
+      </div>
+      <div class="extra">
+        <p>
+          Already Have an Account?<a class="create" href="/users/sign-in"
+            >Sign In</a
+          >
+        </p>
+      </div>
+
+      <div class="social-icon extra">
+        <p style="font-size: 12px; text-align: center">Or connect with</p>
+        <div id="icon">
+          <a href="/users/auth/google"
+            ><img
+              src="https://img.icons8.com/color/48/000000/google-plus--v1.png"
+          /></a>
+          <a href=""
+            ><img
+              src="https://img.icons8.com/color/48/000000/facebook-circled.png"
+          /></a>
+          <a href="#">
+            <img
+              src="https://img.icons8.com/color/48/000000/twitter-circled.png"
+            />
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
